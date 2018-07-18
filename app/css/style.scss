@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+body {
+  font-family: Lato, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+//container{
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+// Wrapper
+
+.wrapper {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.item {
+  padding: 20px;
+  position: relative;
+
+  .date {
+    font-weight: bold;
+    display: block;
+    padding-top: 20px;
+  }
+
+  .read-more {
+    display: inline-block;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #29B6F6;
+    position: absolute;
+    bottom: -40px;
+    color: #000;
+    background: #fff;
+
+    &:focus,
+    &:hover {
+      background: #ccc;
+      color: #fff;
+    }
+  }
+}
+// Media Queries
+@media all and (max-width: 768px) {
+  .container {
+    width: auto;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    .read-more {
+      position: inherit;
+      bottom: auto;
+    }
+  }
+}

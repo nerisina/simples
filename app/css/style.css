@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+body {
+  font-family: Lato, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+a:focus, a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.wrapper {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.item {
+  padding: 20px;
+  position: relative;
+}
+.item .date {
+  font-weight: bold;
+  display: block;
+  padding-top: 20px;
+}
+.item .read-more {
+  display: inline-block;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid #29B6F6;
+  position: absolute;
+  bottom: -40px;
+  color: #000;
+  background: #fff;
+}
+.item .read-more:focus, .item .read-more:hover {
+  background: #ccc;
+  color: #fff;
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    width: auto;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .wrapper .read-more {
+    position: inherit;
+    bottom: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
